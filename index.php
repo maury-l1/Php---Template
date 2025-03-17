@@ -38,7 +38,7 @@
                 <?php
                     $dirPath = "./";
                     $files = [];
-                    $excluded = ["index.php", "html", "css", "img"]; // Elements a excloure
+                    $excluded = ["README.md", "index.php", "html", "css", "img"]; // Elements a excloure
 
                     // Obre el directori i recull els fitxers
                     if ($handle = opendir($dirPath)) {
