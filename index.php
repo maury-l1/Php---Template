@@ -36,29 +36,44 @@
     
             <nav>
                 <?php
-                    $dir = opendir("./"); 
-                    while ($file = readdir($dir)) {
-    
-                        if ($file != "index.php" && !str_starts_with($file, ".")) {
-                            if (is_dir($file)) {
-                                echo "<details name='folder-content' class='folder-filter'>";
-                                echo "<summary class='page-card folder'>$file</summary>";
-                                echo "<ul>";
-                                $subdir = opendir($file);
-                                while ($subfile = readdir($subdir)) {
-                                    if ($subfile != "." && $subfile != "..") {
-                                        echo "<li><a href='./$file/$subfile' target='_BLANK'>$subfile</a></li>";
-                                    }
-                                }
-                                echo "</ul>";
-                                echo "</details>";
+                    $dirPath = "./";
+                    $files = [];
+                    $excluded = ["index.php", "html", "css", "img"]; // Elements a excloure
+
+                    // Obre el directori i recull els fitxers
+                    if ($handle = opendir($dirPath)) {
+                        while (false !== ($file = readdir($handle))) {
+                            if (!in_array($file, $excluded) && !str_starts_with($file, ".")) {
+                                $files[] = $file; // Guarda els noms dels fitxers i carpetes
                             }
-                            else echo "<a href='$file' class='page-card file file-filter'>$file</a>";
-                            
                         }
-                    } 
-                    closedir($dir);    
+                        closedir($handle);
+                    }
+
+                    // Ordena els fitxers alfabèticament
+                    sort($files, SORT_NATURAL | SORT_FLAG_CASE);                    
+
+                    // Processa els fitxers ordenats
+                    foreach ($files as $file) {
+                        if (is_dir($file)) {
+                            echo "<details name='folder-content' class='folder-filter'>";
+                            echo "<summary class='page-card folder'>$file</summary>";
+                            echo "<ul>";
+                            
+                            $subfiles = array_diff(scandir($file), array('.', '..'));
+                            foreach ($subfiles as $subfile) {
+                                echo "<li><a href='./$file/$subfile' target='_BLANK'>$subfile</a></li>";
+                            }
+
+                            echo "</ul>";
+                            echo "</details>";
+                        } else {
+                            echo "<a href='$file' class='page-card file file-filter'>$file</a>";
+                        }
+                    }
+
                     clearstatcache();
+
                 ?>
             </nav>
         </div>
