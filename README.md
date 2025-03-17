@@ -15,8 +15,15 @@ Install the previous mentioned **plugins** and **Serve the PHP** project like th
 
 
 After this, you can browse the result in your web browser:
-![image](https://github.com/user-attachments/assets/d5053e95-4d92-45f0-b9ec-e875c8915db7)
+![image](https://github.com/user-attachments/assets/22d60b67-535e-4b05-9c35-ea7b6d52963a)
 
+Each file inside the folders will be shown in a new blank tab on your web browser.
 
 # Layout
-![image](https://github.com/user-attachments/assets/20988531-c7cc-4511-996d-d707192cdc00)
+Full window:
+
+![image](https://github.com/user-attachments/assets/30b6d11f-7f0f-41b4-8880-26949ad03574)
+
+Responsive:
+
+![image](https://github.com/user-attachments/assets/1ad208fe-3546-4872-94b8-bd35b91c6b22)
