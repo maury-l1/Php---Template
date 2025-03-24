@@ -80,9 +80,6 @@
     </main>
 
 
-    <?php
-        include("html/activity-template-footer.html");
-    ?>
 
     <script>
         const filterForm = document.getElementById("filterForm")

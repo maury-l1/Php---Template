@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A06_LecturaDades</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+    <style>
+        .glass {
+            background: rgba(30, 30, 30, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
 </head>
-<body>
-    <h1>dades</h1>
+<body class="flex flex-col items-center justify-center min-h-screen transition-colors duration-500">
 
-    <ul>
-        <li><a href="src/veureTotesLesNoticies.php">Veure totes les notícies</a></li>
-        <li><a href="src/veureNoticiesCultura.php">Veure notícies de Cultura</a></li>
-        <li><a href="src/veureNoticiesFebrer.php">Veure notícies de Febrer</a></li>
-        <li><a href="src/numeroNoticiesFebrer.php">Veure número de notícies de Febrer</a></li>
-        <li><a href="src/veureSeccions.php">Veure seccions</a></li>
-        <li><a href="src/veureSeccionsLink.php">Veure seccions links</a></li>
-        <li><a href="src/cercaNoticies.php">Cerca notícies exactas</a></li>
-        <li><a href="src/cercaNotParcial.php">Cerca notícies parcials</a></li>
-    </ul>
-    
+    <div class="glass p-10 rounded-3xl shadow-2xl w-full max-w-xl border border-gray-700">
+        <div class="text-center mb-8">
+            <i data-lucide="database" class="w-14 h-14 mx-auto text-indigo-400 drop-shadow-xl animate-pulse"></i>
+            <h1 class="text-5xl font-extrabold mt-4 text-white tracking-tight">Dades</h1>
+            <p class="text-gray-400 mt-2 text-base">Consulta interactiva de notícies i seccions</p>
+        </div>
+        <ul class="space-y-4">
+            <!-- Enlace generado dinámicamente con motion effect (simulado en hover) -->
+            <li>
+                <a href="src/veureTotesLesNoticies.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50 backdrop-blur-lg">
+                   <i data-lucide="list" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Veure totes les notícies
+                </a>
+            </li>
+            <li>
+                <a href="src/veureNoticiesCultura.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="book-open" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Veure notícies de Cultura
+                </a>
+            </li>
+            <li>
+                <a href="src/veureNoticiesFebrer.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="calendar" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Veure notícies de Febrer
+                </a>
+            </li>
+            <li>
+                <a href="src/numeroNoticiesFebrer.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="hash" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Número de notícies de Febrer
+                </a>
+            </li>
+            <li>
+                <a href="src/veureSeccions.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="layers" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Veure seccions
+                </a>
+            </li>
+            <li>
+                <a href="src/veureSeccionsLink.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="link" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Veure seccions links
+                </a>
+            </li>
+            <li>
+                <a href="src/cercaNoticies.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="search" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Cerca notícies exactes
+                </a>
+            </li>
+            <li>
+                <a href="src/cercaNotParcial.php" 
+                   class="group flex items-center gap-3 bg-gray-700/80 hover:bg-indigo-500/80 transition-all duration-300 transform hover:scale-105 rounded-xl p-4 shadow-xl hover:shadow-indigo-500/50">
+                   <i data-lucide="search-code" class="w-6 h-6 text-indigo-300 group-hover:animate-bounce"></i> Cerca notícies parcials
+                </a>
+            </li>
+        </ul>
+        <div class="text-center mt-10 text-gray-500 text-sm">
+            Desenvolupat per <span class="font-semibold text-indigo-400">444</span>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
