@@ -15,7 +15,7 @@
     <header>
         <div class="header-content">
             <a href="https://itecbcn.eu" target="_blank" rel="noopener"><img src="img/itb-logo.webp" alt="logo ITB" /></a>
-            <strong>&lt;Ulises Castell i Carlos Capó&gt;</strong>
+            <strong>444</strong>
         </div>
     </header>
 
